@@ -1,0 +1,7 @@
+{
+  "name": "podcast",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
