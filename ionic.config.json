@@ -1,7 +1,16 @@
 {
   "name": "podcast",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "enterprise": {
+      "keyId": 1583,
+      "productKey": "key_db21e16dee894861a847355c694549ac",
+      "appId": "8a56013a",
+      "orgId": "709f4a2a-4d6d-494c-a60a-4c296d136848",
+      "registries": [
+        "@ionic-enterprise;https://registry.ionicframework.com/"
+      ]
+    }
   },
   "type": "react"
 }

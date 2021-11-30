@@ -8,6 +8,8 @@
     "@capacitor/haptics": "1.1.2",
     "@capacitor/keyboard": "1.1.2",
     "@capacitor/status-bar": "1.0.5",
+    "@ionic-enterprise/auth": "^3.9.2-dev-6ba589f.0",
+    "@ionic-enterprise/auth-react": "^3.9.2-dev-6ba589f.0",
     "@ionic/react": "^5.5.0",
     "@ionic/react-router": "^5.5.0",
     "@testing-library/jest-dom": "^5.11.9",
