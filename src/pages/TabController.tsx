@@ -7,10 +7,22 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonAvatar,
+  IonGrid,
+  IonCol,
+  IonRow,
+  IonChip,
+  IonText,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, homeOutline, homeSharp, menuSharp, searchOutline, searchSharp, square, triangle, ellipsisVerticalSharp } from 'ionicons/icons';
-
+import { ellipse, homeOutline, homeSharp, menuSharp, searchOutline, searchSharp, square, triangle, ellipsisVerticalSharp, ellipsisVertical } from 'ionicons/icons';
+import logoSVG from '../asset/icon/logo.svg';
+import searchIcon from '../asset/icon/searchIcon.svg';
+import homeIcon from '../asset/icon/homeIcon.svg';
+import activityIcon from '../asset/icon/activityIcon.svg';
 import Tab1 from './Tab1';
 import Tab2 from './Tab2';
 import Tab3 from './Tab3';
@@ -33,37 +45,64 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import '../theme/variables.css';
+import React from 'react';
 const TabController: React.FC = () => (
-    <IonTabs>
-      <IonRouterOutlet>
-        <Route exact path="/tab1">
-          <Tab1 />
-        </Route>
-        <Route exact path="/tab2">
-          <Tab2 />
-        </Route>
-        <Route path="/tab3">
-          <Tab3 />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/tab1" />
-        </Route>
-      </IonRouterOutlet>
-      <IonTabBar slot="bottom" color="primary">
+  <IonApp>
+    <IonHeader  >
+      <IonToolbar class="main" color="primary">
+        
+        <IonGrid slot='start' >
+         <IonRow  >
+           <IonIcon  style={{width:150,height:30}}src={logoSVG}  />
+        </IonRow>
+        </IonGrid>
+       
+         <IonRow  size-sm slot='end'style={{width:80,display:'flex', alignItems: 'center'}}>
+         <IonIcon  style={{fontSize:24}} class='icon' icon={ellipsisVertical} />
+      <IonAvatar style={{width:30,height:30}}>
+        <img src="https://media.npr.org/assets/img/2021/11/08/gettyimages-1064367448-0a580d4a5a33558528b8ddd13b46dc67ef6643ab-s1100-c50.jpg" />
+      </IonAvatar>
+     
+    
+        </IonRow>
+       
+       
+      </IonToolbar>
+    </IonHeader>
+
+    <IonReactRouter>
+      <IonTabs >
+        <IonRouterOutlet>
+          <Route exact path="/tab1">
+            <Tab1 />
+          </Route>
+          <Route exact path="/tab2">
+            <Tab2 />
+          </Route>
+          <Route path="/tab3">
+            <Tab3 />
+          </Route>
+          <Route exact path="/">
+            <Redirect to="/tab1" />
+          </Route>
+        </IonRouterOutlet>
+        <IonTabBar slot="bottom" color="primary">
           <IonTabButton tab="tab1" href="/tab1" >
-            <IonIcon class='icon' icon={searchSharp} />
+            <IonIcon style={{width:28,height:28}} class='icon' icon={searchIcon} />
         
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon class='icon' icon={homeSharp} />
+            <IonIcon style={{width:40,height:40}}class='icon' icon={homeIcon} />
            
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon class='icon' icon={menuSharp} />
+            <IonIcon class='icon' icon={activityIcon} />
            
           </IonTabButton>
         </IonTabBar>
-    </IonTabs>
+      </IonTabs>
+    </IonReactRouter>
+  </IonApp>
   );
 
   export default TabController;

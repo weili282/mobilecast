@@ -7,8 +7,13 @@ import {
   IonToolbar,
   IonButton,
   useIonRouter,
+  IonIcon,
+  IonGrid,
+  IonCol,
+  IonRow,
 } from "@ionic/react";
 import { useAuthConnect } from "@ionic-enterprise/auth-react";
+import logoSVG from '../asset/icon/biglogo.svg';
 
 interface LoginProps {}
 
@@ -26,14 +31,13 @@ const Login: React.FC<LoginProps> = () => {
   };  
 
   return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Login</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent>
-        <IonButton expand="block" onClick={handleLogin}>
+    <IonPage  color="primary">
+     
+      <IonContent color="primary" style={{display:"block",textAlign: "center"}}>
+        <IonGrid>
+          <IonCol>
+      <IonIcon  style={{width:300,height:400}}src={logoSVG}  />
+        <IonButton color='tertiary' expand="block" onClick={handleLogin}>
           Login
         </IonButton>
         {error && (
@@ -42,6 +46,8 @@ const Login: React.FC<LoginProps> = () => {
             <div>{JSON.stringify(error)}</div>
           </>
         )}
+        </IonCol>
+        </IonGrid>
       </IonContent>
     </IonPage>
   );
