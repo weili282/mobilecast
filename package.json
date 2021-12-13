@@ -8,6 +8,7 @@
     "@capacitor/haptics": "1.1.2",
     "@capacitor/keyboard": "1.1.2",
     "@capacitor/status-bar": "1.0.5",
+    "@glidejs/glide": "^3.5.2",
     "@ionic-enterprise/auth": "^3.9.2-dev-6ba589f.0",
     "@ionic-enterprise/auth-react": "^3.9.2-dev-6ba589f.0",
     "@ionic/react": "^5.5.0",
@@ -67,7 +68,9 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "3.2.5"
+    "@capacitor/cli": "3.2.5",
+    "node-sass": "^7.0.0",
+    "sass-loader": "^12.4.0"
   },
   "description": "An Ionic project"
 }
