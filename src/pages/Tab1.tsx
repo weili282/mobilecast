@@ -20,17 +20,22 @@ import { IonContent,
         IonList,
         IonThumbnail,
         IonChip,
+        useIonModal,
+        IonModal,
       IonButton} from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
+import Player from './Player.tsx'
+import PodcastPage from  './Podcast.tsx'
 import { playCircleSharp,headset} from 'ionicons/icons';
+import {truncate} from '../function/util.js'
 //import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 //import { useAuthInterceptor } from '../core/auth';
 
 import { IonIcon } from '@ionic/react';
 import Glide from "@glidejs/glide";
 // Required Core Stylesheet
-import "@glidejs/glide/src/assets/sass/*";
+import "../theme/glide.css";
 
 // Optional Theme Stylesheet
 //import "@glidejs/glide/src/assets/sass/glide.theme";
@@ -468,10 +473,6 @@ async function sendGetRequest(){
     return response.data;
   })
   */
-
-
-
-
 const Tab1: React.FC = () => {
     const [audio, setAudio] = useState([
         {
@@ -480,7 +481,21 @@ const Tab1: React.FC = () => {
         }
     ]);
     const[podcast, setPodcast] = useState([]);
-   
+    const[content, setContent] = useState({});
+    const handleDismiss = () => {
+      dismiss();
+    };
+    const [present, dismiss] = useIonModal(Player, {
+      onDismiss: handleDismiss,
+    });
+
+  const [showModal, setShowModal] = useState(false);
+
+  async function closeModal() {
+    await setShowModal(false);
+  }
+
+
   useEffect(() => {
     
 
@@ -513,7 +528,11 @@ const Tab1: React.FC = () => {
         response.json().then(function(data) {
             console.log(data)
             setPodcast(data);
-            new Glide('.glide').mount()
+            new Glide(".glide", {
+              peek: 50,
+              perView: 2,
+              type: "carousel"
+            }).mount();
           });
     })
    
@@ -532,25 +551,32 @@ const Tab1: React.FC = () => {
     
  
     <IonContent fullscreen class='main1' >
-    <div class="glide">
+    <IonModal isOpen={showModal}>
+        <Player closeAction={closeModal}
+                podcast ={content}>
+        </Player>
+      </IonModal>
+
+<div class="glide" style={{backgroundColor:'#E20074',minHeight:110}}>
   <div data-glide-el="track" class="glide__track">
-    <ul class="glide__slides">
+    <ul class="slides">
     {podcast.map((podcast) => (
-      <li class="glide__slide">
-          <IonThumbnail style={{marginTop:10,marginBottom:10,fontSize:12 }}slot='start'>
-           <IonImg  style={{width:100, height:100}}src={"https://www.kesslerlawfirm.com/wp-content/uploads/2021/02/podcastneonlogo.jpg"}/>
-        </IonThumbnail>
+      <li  class="slide">
+         <div  onClick={() => {setShowModal(true);setContent(podcast)}}>
+           {console.log(podcast)}
+           <IonImg  src={"https://www.kesslerlawfirm.com/wp-content/uploads/2021/02/podcastneonlogo.jpg"}/>
+          </div>
       </li>
     ))}
     </ul>
   </div>
 </div>
     <IonList>
-        
-      
     {audio.map((podcast) => (
-      <IonItem >
-         
+      
+      <IonItem  onClick={() => {setShowModal(true);setContent(podcast)}}>
+      
+
          <IonThumbnail style={{marginTop:10,marginBottom:10,minHeight:100,fontSize:12 }}slot='start'>
            <IonImg  style={{width:75, height:75}}src={podcast.thumbnail}/>
            <div style={{verticalAlign:"middle",display:"flex"}}>
@@ -562,15 +588,13 @@ const Tab1: React.FC = () => {
         <IonCol style={{fontSize:12,position:'absolute',top:0}}>
         <IonIcon color='primary' icon={headset} class='icon' style={{marginRight:3}}/><IonText ><b>{podcast.title}</b></IonText><br/>
           <IonText >{new Date(podcast.publishDate).toLocaleDateString("en-US")}</IonText><br/>
-          <IonText >{podcast.description}</IonText>
+          <IonText >{truncate(podcast.description||'',140,true)}</IonText>
           
           </IonCol>
         </IonGrid>
       </IonItem>
        ))}
-    
-    </IonList>
-      
+    </IonList>   
     </IonContent>
   </IonPage>
   );

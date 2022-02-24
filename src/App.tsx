@@ -78,6 +78,7 @@ const logoutUrl = isPlatform("capacitor")
           <Route path="/logout" component={Logout} />
           <Route path="/callback" component={Callback} />
           <PrivateRoute path="/tabs" component={TabController} initializingComponent={() => <div>...Private Route Loading...</div>} />        
+          
           <Redirect from="/" to="/login" exact />
         </Switch>
       </AuthConnectProvider>

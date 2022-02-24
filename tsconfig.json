@@ -4,7 +4,8 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
+      "es2015"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -16,11 +17,13 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "isolatedModules": true
   },
   "include": [
     "src"
-  ]
+, "src/pages/.tsx"  ]
 }
