@@ -7,7 +7,7 @@ type MyModalProps = {
   closeAction: Function;
   text: string;
 }
-
+/*test*/
 class MyModal extends React.Component<MyModalProps> {
    
   render() {
