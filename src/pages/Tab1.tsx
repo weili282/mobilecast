@@ -21,12 +21,13 @@ import { IonContent,
         IonThumbnail,
         IonChip,
         useIonModal,
+        useIonRouter,
         IonModal,
       IonButton} from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 import Player from './Player.tsx'
-import PodcastPage from  './Podcast.tsx'
+import PodcastPage from  './Podcast'
 import { playCircleSharp,headset} from 'ionicons/icons';
 import {truncate} from '../function/util.js'
 //import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
@@ -474,6 +475,7 @@ async function sendGetRequest(){
   })
   */
 const Tab1: React.FC = () => {
+  const router = useIonRouter();
     const [audio, setAudio] = useState([
         {
             thumbnail:'',
@@ -495,6 +497,9 @@ const Tab1: React.FC = () => {
     await setShowModal(false);
   }
 
+  const simpleNavigate = (id) => {
+    router.push(`/tabs/podcast/${id}`, "forward", "push");
+    }
 
   useEffect(() => {
     
@@ -562,9 +567,9 @@ const Tab1: React.FC = () => {
     <ul class="slides">
     {podcast.map((podcast) => (
       <li  class="slide">
-         <div  onClick={() => {setShowModal(true);setContent(podcast)}}>
-           {console.log(podcast)}
-           <IonImg  src={"https://www.kesslerlawfirm.com/wp-content/uploads/2021/02/podcastneonlogo.jpg"}/>
+         <div  onClick={() => {simpleNavigate(podcast.id)}}>
+          
+           <IonImg  src={podcast.art}/>
           </div>
       </li>
     ))}

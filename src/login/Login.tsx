@@ -22,7 +22,7 @@ const Login: React.FC<LoginProps> = () => {
   const router = useIonRouter();
   useEffect(() => {
     if (isAuthenticated) {
-      router.push("/tabs/tab1", "none", "replace");
+      router.push("/tabs", "none", "replace");
     }
   }, [isAuthenticated, router]);
 

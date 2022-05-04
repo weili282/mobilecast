@@ -1,4 +1,4 @@
-import { Redirect, Route } from 'react-router-dom';
+import { Redirect, Route,RouteComponentProps } from 'react-router-dom';
 import {
   IonApp,
   IonIcon,
@@ -26,6 +26,8 @@ import activityIcon from '../asset/icon/activityIcon.svg';
 import Tab1 from './Tab1';
 import Tab2 from './Tab2';
 import Tab3 from './Tab3';
+import PodcastPage from  './Podcast'
+import { person} from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -46,7 +48,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import '../theme/variables.css';
 import React from 'react';
-const TabController: React.FC = () => (
+const TabController: React.FC<RouteComponentProps> = ({match}) => (
   <IonApp>
     <IonHeader  >
       <IonToolbar class="main" color="primary">
@@ -59,32 +61,22 @@ const TabController: React.FC = () => (
        
          <IonRow  size-sm slot='end'style={{width:80,display:'flex', alignItems: 'center'}}>
          <IonIcon  style={{fontSize:24}} class='icon' icon={ellipsisVertical} />
-      <IonAvatar style={{width:30,height:30}}>
-        <img src="https://media.npr.org/assets/img/2021/11/08/gettyimages-1064367448-0a580d4a5a33558528b8ddd13b46dc67ef6643ab-s1100-c50.jpg" />
+      <IonAvatar style={{width:30,height:30,backgroundColor:'#999',paddingLeft:10}}>
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
+      {/* <IonIcon style={{width:30,height:30}} icon={person}  />
+       <img src="https://media.npr.org/assets/img/2021/11/08/gettyimages-1064367448-0a580d4a5a33558528b8ddd13b46dc67ef6643ab-s1100-c50.jpg" />*/}
       </IonAvatar>
-     
-    
         </IonRow>
-       
-       
       </IonToolbar>
     </IonHeader>
 
     <IonReactRouter>
       <IonTabs >
         <IonRouterOutlet>
-          <Route exact path="/tab1">
-            <Tab1 />
-          </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
-          </Route>
-          <Route path="/tab3">
-            <Tab3 />
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/tab1" />
-          </Route>
+        <Route exact path={match.url} component={Tab1} />
+        <Route path={`${match.url}/podcast/:id`} component={PodcastPage} />
+        <Route path={`${match.url}/home`} component={Tab1} />
+          
         </IonRouterOutlet>
         <IonTabBar slot="bottom" color="primary">
           <IonTabButton tab="tab1" href="/tab1" >
