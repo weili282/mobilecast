@@ -6,17 +6,18 @@ interface LogoutProps {}
 
 const Logout: React.FC<LogoutProps> = () => {
   const router = useIonRouter();
-  const { handleLogoutCallback } = useAuthConnect();
-
+  const {logout } = useAuthConnect();
+  
   useEffect(() => {
+    logout();
     (async () => {
       // use when implicitLogin is set to CURRENT
-      // await handleLogoutCallback();
+      
       // router.push('/tabs/tab1');
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  return null;
+  return(<div>logout</div>)
 };
 
 export default Logout;

@@ -1,4 +1,5 @@
 import { Redirect, Route,RouteComponentProps } from 'react-router-dom';
+import React, { useEffect } from "react";
 import {
   IonApp,
   IonIcon,
@@ -47,8 +48,16 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import '../theme/variables.css';
-import React from 'react';
-const TabController: React.FC<RouteComponentProps> = ({match}) => (
+
+
+const TabController: React.FC<RouteComponentProps> = (props) => {
+  
+
+  useEffect(() => {
+   
+  }, []);
+
+return(
   <IonApp>
     <IonHeader  >
       <IonToolbar class="main" color="primary">
@@ -73,9 +82,9 @@ const TabController: React.FC<RouteComponentProps> = ({match}) => (
     <IonReactRouter>
       <IonTabs >
         <IonRouterOutlet>
-        <Route exact path={match.url} component={Tab1} />
-        <Route path={`${match.url}/podcast/:id`} component={PodcastPage} />
-        <Route path={`${match.url}/home`} component={Tab1} />
+        <Route exact path={props.match.url} component={Tab1} />
+        <Route path={`${props.match.url}/podcast/:id`} component={PodcastPage} />
+        <Route path={`${props.match.url}/home`} component={Tab1} />
           
         </IonRouterOutlet>
         <IonTabBar slot="bottom" color="primary">
@@ -96,5 +105,5 @@ const TabController: React.FC<RouteComponentProps> = ({match}) => (
     </IonReactRouter>
   </IonApp>
   );
-
+      }
   export default TabController;
