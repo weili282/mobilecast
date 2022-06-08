@@ -78,7 +78,7 @@ const Login: React.FC<LoginProps> = (props) => {
           <IonCol>
       <IonIcon  style={{width:300,height:400}}src={logoSVG}  />
         <IonButton color='tertiary' expand="block" onClick={handleLogin}>
-          Login1
+          Login
         </IonButton>
         {error && (
           <>

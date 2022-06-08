@@ -92,7 +92,7 @@ return(
             <IonIcon style={{width:28,height:28}} class='icon' icon={searchIcon} />
         
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="tab2" href="/tabs">
             <IonIcon style={{width:40,height:40}}class='icon' icon={homeIcon} />
            
           </IonTabButton>
