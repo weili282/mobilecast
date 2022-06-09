@@ -26,7 +26,7 @@ class MyModal extends React.Component<MyModalProps> {
       <IonContent className="ion-padding">
       <IonCard>
           <IonCardHeader>
-            <IonCardSubtitle>New episode</IonCardSubtitle>
+            <IonCardSubtitle></IonCardSubtitle>
             <IonCardTitle>{this.props.podcast.title}</IonCardTitle>
           </IonCardHeader>
 
@@ -34,11 +34,14 @@ class MyModal extends React.Component<MyModalProps> {
         
             <IonImg src={this.props.podcast.thumbnail} />
             <AudioPlayer
-    autoPlay
-    src={this.props.podcast.audioURL}
-    onPlay={e => console.log("onPlay")}
-    // other props here
-  />
+                autoPlay
+                showJumpControls={false}
+                customVolumeControls={[]}
+                customAdditionalControls={[]} 
+                src={this.props.podcast.audioURL}
+                onPlay={e => console.log("onPlay")}
+                // other props here
+              />
             {this.props.podcast.description}
       </IonCardContent>
         </IonCard>
