@@ -25,6 +25,7 @@ import Login from './login/Login';
 import Logout from './login/Logout';
 import Callback from './login/Callback';
 import PodcastPage from  './pages/Podcast'
+import SubscriptionsPage from  './pages/Subscriptions'
 import TabController from './pages/TabController';
 
 /* Core CSS required for Ionic components to work properly */
@@ -86,6 +87,7 @@ const logoutUrl = isPlatform("capacitor")
             <Route path="/callback" component={Callback} />
             <PrivateRoute path="/tabs" component={TabController} initializingComponent={() => <div>...Private Route Loading...</div>} />        
             <Route path='/podcast' component={PodcastPage} />
+            <Route path='/subscriptions' component={SubscriptionsPage} />
             <Redirect from="/" to="/login" exact />
           </Switch>
         </UserContextProvider>

@@ -169,7 +169,7 @@ const subscribeAction=()=>{
 return (
 <IonPage >
   <IonHeader>
-    <div style={{backgroundColor:'#E20074',minHeight:150,topPadding:100}}>
+    <div style={{backgroundColor:'#E20074',minHeight:150,topPadding:150,backgroundSize:'cover', backgroundImage:`url("${podcast.bannerArt}")` }}>
       <IonText style={{color:'#fff'}}>
         <h2>{podcast.title}</h2>
       </IonText>
@@ -177,7 +177,7 @@ return (
         <IonRow>
           <IonCol size="8">
             <IonThumbnail >
-              <IonImg style={{height:100,width:100,border:2,borderColor:"#E20074",float:'left',margin:5}}src={podcast.art} />
+              <IonImg style={{maxWidth:'100%',height:'auto',border:2,borderColor:"#E20074",float:'left',margin:5}}src={podcast.art} />
             </IonThumbnail>
            
           </IonCol>
@@ -197,9 +197,9 @@ return (
                 podcast ={content}>
         </Player>
       </IonModal>
-      
+
     <div style={{backgroundColor:"#fff",paddingTop:40,padding: 10,}}>
-      <IonText >{new Date(podcast.createAt).toLocaleDateString("en-US")}</IonText><br/>
+     
       <IonText >{truncate(podcast.description||'',140,true)}</IonText>
       <IonList>
              

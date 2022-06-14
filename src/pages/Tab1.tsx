@@ -503,7 +503,7 @@ const Tab1: React.FC = () => {
 
   useEffect(() => {
     
-
+      console.log('home')
     fetch('https://54wui56yo5.execute-api.us-east-1.amazonaws.com/develop/latestaudio',{
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
