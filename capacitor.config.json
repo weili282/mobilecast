@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "podcast",
+	"appId": "com.t-mobile.mobilecast ",
+	"appName": "MobileCast",
 	"webDir": "build",
 	"bundledWebRuntime": false
 }
