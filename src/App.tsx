@@ -51,11 +51,11 @@ const platform = isPlatform("capacitor") ? "capacitor" : "web";
 
 const redirectUri = isPlatform("capacitor")
   ? "com.oktapreview.t-mobile:/callback"
-  : "http://localhost:8100/callback";
+  : "https://dev.sprintu.com/pwa/";
 
 const logoutUrl = isPlatform("capacitor")
   ? "com.oktapreview.t-mobile:/"
-  : "http://localhost:8100/callback";
+  : "https://dev.sprintu.com/pwa/";
   
 
   const AuthConnectContainer: React.FC = () => {
