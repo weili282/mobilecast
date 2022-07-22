@@ -85,7 +85,7 @@ return(
       </IonToolbar>
     </IonHeader>
 
-    <IonReactRouter basename='pwa'>
+    <IonReactRouter basename='/pwa'>
       <IonTabs >
         <IonRouterOutlet>
         <Route exact path={props.match.url} component={Tab1} />
