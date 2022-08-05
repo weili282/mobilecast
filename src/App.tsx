@@ -67,13 +67,13 @@ const logoutUrl = isPlatform("capacitor")
         logLevel={"ERROR"}
         authConfig={"okta"}
         platform={"web"}
-        clientID={"0oa1b5v63roZ4lb3M0h8"}
+        clientID={"0oa12hthsfmElQhhe0h8"}
         discoveryUrl={"https://t-mobile.oktapreview.com/oauth2/aus12hte7hwztaMuH0h8/.well-known/oauth-authorization-server"}
         redirectUri={redirectUri}
         scope={"openid profile email address phone offline_access"}
         logoutUrl={logoutUrl}
         iosWebView={"private"}
-        webAuthFlow={"PKCE"}
+        webAuthFlow={"implicit"}
         implicitLogin={"POPUP"}
         loginPath={"/login"}
         onLoginSuccess={(result) => console.log("Login Successful", { result })}
