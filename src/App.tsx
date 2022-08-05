@@ -74,7 +74,7 @@ const logoutUrl = isPlatform("capacitor")
         logoutUrl={logoutUrl}
         iosWebView={"private"}
         webAuthFlow={"PKCE"}
-        implicitLogin={"POPUP"}
+        implicitLogin={"CURRENT"}
         loginPath={"/login"}
         onLoginSuccess={(result) => console.log("Login Successful", { result })}
         onLogoutSuccess={() => console.log("Logout Successful")}
