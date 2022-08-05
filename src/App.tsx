@@ -51,7 +51,7 @@ const platform = isPlatform("capacitor") ? "capacitor" : "web";
 
 const redirectUri = isPlatform("capacitor")
   ? "com.oktapreview.t-mobile:/callback"
-  : "https://dev.sprintu.com/";
+  : "https://dev.sprintu.com/callback";
 
 const logoutUrl = isPlatform("capacitor")
   ? "com.oktapreview.t-mobile:/"
