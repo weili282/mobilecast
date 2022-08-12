@@ -73,7 +73,7 @@ const logoutUrl = isPlatform("capacitor")
         scope={"openid profile email"}
         logoutUrl={logoutUrl}
         iosWebView={"private"}
-        webAuthFlow={"implicit"}
+        webAuthFlow={"PKCE"}
         implicitLogin={"POPUP"}
         loginPath={"/login"}
         onLoginSuccess={(result) => console.log("Login Successful", { result })}
