@@ -75,9 +75,9 @@ return(
         </IonGrid>
        
          <IonRow  size-sm slot='end'style={{width:80,display:'flex', alignItems: 'center'}}>
-         <IonIcon  style={{fontSize:24}} class='icon' icon={ellipsisVertical} />
+         {/*<IonIcon  style={{fontSize:24}} class='icon' icon={ellipsisVertical} />*/}
       <IonAvatar style={{width:30,height:30,backgroundColor:'#999',paddingLeft:10}}>
-      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
+     
       {/* <IonIcon style={{width:30,height:30}} icon={person}  />
        <img src="https://media.npr.org/assets/img/2021/11/08/gettyimages-1064367448-0a580d4a5a33558528b8ddd13b46dc67ef6643ab-s1100-c50.jpg" />*/}
       </IonAvatar>
@@ -95,7 +95,7 @@ return(
         </IonRouterOutlet>
         <IonTabBar slot="bottom" color="primary">
           <IonTabButton tab="tab1" href="/tab1" >
-            <IonIcon style={{width:28,height:28}} class='icon' icon={searchIcon} />
+            <IonIcon style={{width:28,height:28,opacity:.2}} class='icon' icon={searchIcon} />
         
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tabs">

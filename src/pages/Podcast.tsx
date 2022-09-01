@@ -183,7 +183,7 @@ return (
           </IonCol>
           <IonCol>
             <IonButton size="small" color="secondary" onClick={()=>subscribeAction()}>
-           {!isSubscribe?'Subscribe':'Unsubscribe'} 
+           {!isSubscribe?'Follow':'Unfollow'} 
             </IonButton>
           </IonCol>
         </IonRow>
