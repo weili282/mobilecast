@@ -75,7 +75,7 @@ return(
         </IonGrid>
        
          <IonRow  size-sm slot='end'style={{width:80,display:'flex', alignItems: 'center'}}>
-         {/*<IonIcon  style={{fontSize:24}} class='icon' icon={ellipsisVertical} />*/}
+        {/*} <IonIcon  style={{fontSize:24}} class='icon' icon={ellipsisVertical} />*/}
       <IonAvatar style={{width:30,height:30,backgroundColor:'#999',paddingLeft:10}}>
      
       {/* <IonIcon style={{width:30,height:30}} icon={person}  />

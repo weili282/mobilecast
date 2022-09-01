@@ -25,7 +25,7 @@ const Login: React.FC<LoginProps> = (props) => {
     if (isAuthenticated) {
      
       getIdToken().then((res)=>{
-        fetch(`https://api.test.clips.t-mobile.com/checkuser?id=${res.EmployeeNumber}`,{
+        fetch(`https://api.dev.clips.t-mobile.com/checkuser?id=${res.EmployeeNumber}`,{
           method: 'GET', // *GET, POST, PUT, DELETE, etc.
           mode: 'cors', // no-cors, *cors, same-origin
           cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -41,7 +41,7 @@ const Login: React.FC<LoginProps> = (props) => {
               { "id": `${res.EmployeeNumber}`,
                 "firstname": `${res.FirstName}`,
                 "lastname": `${res.LastName}`};
-              fetch(`https://api.test.clips.t-mobile.com/registeruser`,{
+              fetch(`https://api.dev.clips.t-mobile.com/registeruser`,{
                 method: 'POST', // *GET, POST, PUT, DELETE, etc.
                 mode: 'cors', // no-cors, *cors, same-origin
                 cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached

@@ -65,7 +65,7 @@ const { getIdToken } = useAuthConnect();
     console.log('subscription')
     getIdToken().then((res)=>{
         console.log(res)
-      fetch(`https://api.test.clips.t-mobile.com/checkusersubscriptions?id=${res.EmployeeNumber}`,{
+      fetch(`https://api.dev.clips.t-mobile.com/checkusersubscriptions?id=${res.EmployeeNumber}`,{
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached

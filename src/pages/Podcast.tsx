@@ -99,7 +99,7 @@ async function closeModal() {
 
 useEffect(() => {
 
-      fetch(`https://651ru2f8j2.execute-api.us-east-1.amazonaws.com/develop/podcastshow?id=${match.params.id}`,{
+      fetch(`https://54wui56yo5.execute-api.us-east-1.amazonaws.com/develop/podcastshow?id=${match.params.id}`,{
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -117,7 +117,7 @@ useEffect(() => {
       })
       getIdToken().then((res)=>{
           setUserID(res.EmployeeNumber)
-          fetch(`https://api.test.clips.t-mobile.com/checkusersubscriptions?id=${res.EmployeeNumber}`,{
+          fetch(`https://api.dev.clips.t-mobile.com/checkusersubscriptions?id=${res.EmployeeNumber}`,{
           method: 'GET', // *GET, POST, PUT, DELETE, etc.
           mode: 'cors', // no-cors, *cors, same-origin
           cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -149,7 +149,7 @@ const subscribeAction=()=>{
     "podcast_id": `${match.params.id}`};
     setIsSubscribe(!isSubscribe)
 
-  fetch(`https://api.test.clips.t-mobile.com/usersubscriptions`,{
+  fetch(`https://api.dev.clips.t-mobile.com/usersubscriptions`,{
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
