@@ -8,9 +8,9 @@
       </g>
     </g>
     <g id="Group_1448" data-name="Group 1448" transform="translate(954.742 1209.509)">
-      <text id="Mobile_Cast" data-name="Mobile Cast" transform="translate(283.258 345.102)" fill="#fff" font-size="55" font-family="TeleNeo-Regular, TeleNeo" letter-spacing="-0.01em"><tspan x="-248.17" y="0">Mobile</tspan><tspan y="0" font-size="30"> </tspan><tspan y="0">Cast</tspan></text>
+      <text id="Mobile_Cast" data-name="Mobile Cast" transform="translate(283.258 345.102)" fill="#fff" font-size="50" font-family="Helvetica, Arial, Calibri, sans-serif" letter-spacing="-0.01em"><tspan x="-248.17" y="0">Mobile</tspan><tspan y="0" font-size="10"> </tspan><tspan y="0">Cast</tspan></text>
       <path id="Path_270" data-name="Path 270" d="M48.149,17.363v4.12a3.679,3.679,0,0,1-7.358,0v-4.12a3.679,3.679,0,1,1,7.358,0M35.111,20.719v21.4a3.679,3.679,0,0,1-7.358,0v-21.4a3.679,3.679,0,0,1,7.358,0m25.753,8.653v4.12a3.679,3.679,0,0,1-7.358,0v-4.12a3.679,3.679,0,0,1,7.358,0m-51.506,0v4.12a3.679,3.679,0,0,1-7.358,0v-4.12a3.637,3.637,0,0,1,3.679-3.65,3.655,3.655,0,0,1,3.679,3.65M22.073,41.38v4.091a3.679,3.679,0,0,1-7.358,0V41.38a3.679,3.679,0,0,1,7.358,0M35.111,53.094v4.091a3.679,3.679,0,0,1-7.358,0V53.094a3.679,3.679,0,0,1,7.358,0m0-47.415V9.77a3.679,3.679,0,0,1-7.358,0V5.679a3.679,3.679,0,0,1,7.358,0M48.149,32.433V45.471a3.679,3.679,0,0,1-7.358,0V32.433a3.679,3.679,0,0,1,7.358,0M22.073,17.363V30.4a3.679,3.679,0,1,1-7.358,0V17.363a3.679,3.679,0,1,1,7.358,0Z" transform="translate(295.898 298.238)" fill="#fff"/>
     </g>
-    <text id="Clips_Podcasting_platform" data-name="Clips Podcasting platform" transform="translate(990 1575.611)" fill="#fff" font-size="17" font-family="TeleNeo-Regular, TeleNeo" letter-spacing="0.02em"><tspan x="0" y="0">Clips Podcasting platform</tspan></text>
+    <text id="Clips_Podcasting_platform" data-name="Clips Podcasting platform" transform="translate(990 1575.611)" fill="#fff" font-size="17" font-family="Helvetica, Arial, Calibri, sans-serif" letter-spacing="0.02em"><tspan x="0" y="0">Clips Podcasting platform</tspan></text>
   </g>
 </svg>
