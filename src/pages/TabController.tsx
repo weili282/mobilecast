@@ -76,10 +76,10 @@ return(
        
          <IonRow  size-sm slot='end'style={{width:80,display:'flex', alignItems: 'center'}}>
         {/*} <IonIcon  style={{fontSize:24}} class='icon' icon={ellipsisVertical} />*/}
-      <IonAvatar style={{width:30,height:30,backgroundColor:'#999',paddingLeft:10}}>
+      <IonAvatar style={{width:30,height:30,backgroundColor:'#999'}}>
      
-      {/* <IonIcon style={{width:30,height:30}} icon={person}  />
-       <img src="https://media.npr.org/assets/img/2021/11/08/gettyimages-1064367448-0a580d4a5a33558528b8ddd13b46dc67ef6643ab-s1100-c50.jpg" />*/}
+       <IonIcon style={{width:20,height:20,paddingRight:5,paddingTop:5}} icon={person}  />
+       
       </IonAvatar>
         </IonRow>
       </IonToolbar>

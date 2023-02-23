@@ -437,7 +437,7 @@ const data = [
 ]
 
 
-const  endpoint  =  'https://54wui56yo5.execute-api.us-east-1.amazonaws.com/develop/latestaudio ';
+const  endpoint  =  'https://651ru2f8j2.execute-api.us-east-1.amazonaws.com/staging/latestaudio ';
 
 async function sendGetRequest(){
  
@@ -504,7 +504,7 @@ const Tab1: React.FC = () => {
   useEffect(() => {
     
       console.log('home')
-    fetch('https://54wui56yo5.execute-api.us-east-1.amazonaws.com/develop/latestaudio',{
+    fetch('https://651ru2f8j2.execute-api.us-east-1.amazonaws.com/staging/latestaudio',{
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -520,7 +520,7 @@ const Tab1: React.FC = () => {
           });
     })
 
-    fetch('https://54wui56yo5.execute-api.us-east-1.amazonaws.com/develop/podcastlist',{
+    fetch('https://651ru2f8j2.execute-api.us-east-1.amazonaws.com/staging/podcastlist',{
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached

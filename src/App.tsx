@@ -51,7 +51,7 @@ const platform = isPlatform("capacitor") ? "capacitor" : "web";
 
 const redirectUri = isPlatform("capacitor")
   ? "com.oktapreview.t-mobile:/callback"
-  : "https://dev.sprintu.com/callback";
+  : "https://m.sprintu.com/callback";
 
 const logoutUrl = isPlatform("capacitor")
   ? "com.oktapreview.t-mobile:/"
@@ -62,6 +62,7 @@ const logoutUrl = isPlatform("capacitor")
     const location = useLocation();
    
     return (
+      
       <AuthConnectProvider
         checkSessionOnChange={location.pathname}
         logLevel={"ERROR"}
@@ -79,19 +80,24 @@ const logoutUrl = isPlatform("capacitor")
         onLoginSuccess={(result) => console.log("Login Successful", { result })}
         onLogoutSuccess={() => console.log("Logout Successful")}
       >
+      
          <UserContextProvider>
+         
           <Switch>
           
             <Route path="/login" component={Login} />
             <Route path="/logout" component={Logout} />
             <Route path="/callback" component={Callback} />
-            <PrivateRoute path="/tabs" component={TabController} initializingComponent={() => <div>...Private Route Loading...</div>} />        
+            <Route path="/tabs" component={TabController} initializingComponent={() => <div>...Private Route Loading...</div>} />        
             <Route path='/podcast' component={PodcastPage} />
             <Route path='/subscriptions' component={SubscriptionsPage} />
             <Redirect from="/" to="/login" exact />
           </Switch>
+          
         </UserContextProvider>
+       
       </AuthConnectProvider>
+      
     );
   };
 
