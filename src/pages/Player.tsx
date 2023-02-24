@@ -34,7 +34,7 @@ class MyModal extends React.Component<MyModalProps> {
          
           { console.log(this.props.podcast.audioURL)}
         <IonToolbar color="primary">
-          <IonTitle></IonTitle>
+          <IonTitle>test</IonTitle>
           <IonButtons slot="end">
             <IonButton onClick={() => this.props.closeAction()}>
               <IonIcon name="close" slot="icon-only"></IonIcon>
